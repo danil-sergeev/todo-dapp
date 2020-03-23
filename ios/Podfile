@@ -1,8 +1,8 @@
 platform :ios, '9.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-target 'dapplist' do
-  # Pods for dapplist
+target 'dapplists' do
+  # Pods for dapplists
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
   pod 'RCTRequired', :path => "../node_modules/react-native/Libraries/RCTRequired"
@@ -21,6 +21,7 @@ target 'dapplist' do
   pod 'React-RCTText', :path => '../node_modules/react-native/Libraries/Text'
   pod 'React-RCTVibration', :path => '../node_modules/react-native/Libraries/Vibration'
   pod 'React-Core/RCTWebSocket', :path => '../node_modules/react-native/'
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
   pod 'React-cxxreact', :path => '../node_modules/react-native/ReactCommon/cxxreact'
   pod 'React-jsi', :path => '../node_modules/react-native/ReactCommon/jsi'
@@ -34,17 +35,11 @@ target 'dapplist' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
-  pod 'react-native-randombytes', :path => '../node_modules/react-native-randombytes'
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
   pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
 
-  pod 'react-native-safe-area-context', :path => '../node_modules/react-native-safe-area-context'
-
-  pod 'RNScreens', :path => '../node_modules/react-native-screens'
-
-  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
-
-  target 'dapplistTests' do
+  target 'dapplistsTests' do
     inherit! :search_paths
     # Pods for testing
   end
@@ -52,10 +47,10 @@ target 'dapplist' do
   use_native_modules!
 end
 
-target 'dapplist-tvOS' do
-  # Pods for dapplist-tvOS
+target 'dapplists-tvOS' do
+  # Pods for dapplists-tvOS
 
-  target 'dapplist-tvOSTests' do
+  target 'dapplists-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

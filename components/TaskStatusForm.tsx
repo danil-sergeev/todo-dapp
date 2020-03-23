@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Button, Text} from 'react-native';
+import {StyleSheet, Button, Text, Picker} from 'react-native';
 import {DrizzleContext} from '@drizzle/react-plugin';
 import CheckBox from './CheckBox';
 import {DetailNavProp} from '../types';
@@ -30,7 +30,16 @@ const TaskStatusForm = ({status, sendArgs, navigation}: TProps) => {
         </>
       ) : (
         <>
-          <CheckBox selected={selected} onPress={onSelect} />
+          {/*<CheckBox selected={selected} onPress={onSelect} />*/}
+          <Picker
+              selectedValue={selected}
+              style={{height: 10, width: 100}}
+              onValueChange={(itemValue, itemIndex) =>
+                  setSelected(itemValue)
+              }>
+            <Picker.Item label="false" value="false" />
+            <Picker.Item label="true" value="true" />
+          </Picker>
           <Button title="Complete" disabled={!selected} onPress={onSubmit} />
         </>
       )}
