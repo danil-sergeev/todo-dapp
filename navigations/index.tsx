@@ -3,7 +3,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 
 import ListScreen from '../screens/ListScreen';
-// import DetailScreen from '../screens/DetailScreen';
+import DetailScreen from '../screens/DetailScreen';
 
 import {RootNavStack} from '../types';
 
@@ -14,7 +14,7 @@ export default function Navigator() {
         <NavigationContainer>
             <Stack.Navigator headerMode="none">
                 <Stack.Screen name="List" component={ListScreen} />
-                {/*<Stack.Screen name="Detail" component={DetailScreen} />*/}
+                <Stack.Screen name="Detail" component={DetailScreen} />
             </Stack.Navigator>
         </NavigationContainer>
     );
